@@ -12,8 +12,8 @@ public static class Problem1
     /// Time complexity: O(n).
     /// Space complexity: O(n).
     /// </summary>
-    /// <param name="nums">Integer numbers.</param>
-    /// <param name="target">Integer target.</param>
+    /// <param name="nums">Array to traverse.</param>
+    /// <param name="target">Target sum.</param>
     /// <returns>Indices of the two numbers that add up to the target.</returns>
     public static int[] TwoSum(int[] nums, int target)
     {
