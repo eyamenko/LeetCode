@@ -8,19 +8,8 @@ public class ListNode
     /// <summary>
     /// Initializes a new instance of the <see cref="ListNode"/> class.
     /// </summary>
-    /// <param name="val">Node's value.</param>
-    /// <param name="next">Optional next node.</param>
-    public ListNode(int val, ListNode? next = null)
-    {
-        this.Val = val;
-        this.Next = next;
-    }
-
-    /// <summary>
-    /// Initializes a new instance of the <see cref="ListNode"/> class.
-    /// </summary>
     /// <param name="nodes">Node values.</param>
-    public ListNode(int[] nodes)
+    public ListNode(params int[] nodes)
     {
         if (nodes.Length == 0)
         {
