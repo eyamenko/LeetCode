@@ -7,8 +7,8 @@ public static class Problem7
 {
     /// <summary>
     /// You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
-    /// Time complexity: O(n^2).
-    /// Space complexity: O(1).
+    /// Time complexity: O(n log k).
+    /// Space complexity: O(k).
     /// </summary>
     /// <param name="lists">Array to traverse.</param>
     /// <returns>Merged linked list.</returns>
@@ -19,33 +19,50 @@ public static class Problem7
             return null;
         }
 
-        var head = lists[0];
-
-        for (var i = 1; i < lists.Length; i++)
+        if (lists.Length == 1)
         {
-            var (left, right, current) = (head, lists[i], default(ListNode));
+            return lists[0];
+        }
 
-            while (left != null || right != null)
+        var mid = lists.Length / 2;
+        var left = lists[..mid];
+        var right = lists[mid..];
+
+        return Merge(MergeKLists(left), MergeKLists(right));
+    }
+
+    private static ListNode? Merge(ListNode? left, ListNode? right)
+    {
+        if (right == null || left == null)
+        {
+            return right ?? left;
+        }
+
+        ListNode head, current;
+
+        if (left.Val < right.Val)
+        {
+            (head, current, left) = (left, left, left.Next);
+        }
+        else
+        {
+            (head, current, right) = (right, right, right.Next);
+        }
+
+        while (left != null || right != null)
+        {
+            if (left == null || right == null)
             {
-                ListNode smallest;
-
-                if (right == null || (left != null && left.Val < right.Val))
-                {
-                    (smallest, left) = (left!, left!.Next);
-                }
-                else
-                {
-                    (smallest, right) = (right, right.Next);
-                }
-
-                if (current == null)
-                {
-                    current = head = smallest;
-                }
-                else
-                {
-                    current = current.Next = smallest;
-                }
+                current.Next = left ?? right;
+                break;
+            }
+            else if (left.Val < right.Val)
+            {
+                (current, current.Next, left) = (left, left, left.Next);
+            }
+            else
+            {
+                (current, current.Next, right) = (right, right, right.Next);
             }
         }
 
