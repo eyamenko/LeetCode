@@ -21,7 +21,7 @@ public static class Problem6
     /// <returns>True, if the input string is valid.</returns>
     public static bool IsValid(string s)
     {
-        var stack = new Stack<char>();
+        var stack = new Stack<char>(s.Length);
 
         foreach (var ch in s)
         {

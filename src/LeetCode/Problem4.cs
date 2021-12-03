@@ -14,7 +14,7 @@ public static class Problem4
     /// <returns>Triplets that add up to 0.</returns>
     public static IList<IList<int>> ThreeSum(int[] nums)
     {
-        var result = new List<IList<int>>();
+        var result = new List<IList<int>>(nums.Length);
 
         Array.Sort(nums);
 

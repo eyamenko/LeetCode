@@ -16,7 +16,7 @@ public static class Problem2
     {
         var maxLength = 0;
 
-        for (var (left, right, set) = (0, 0, new HashSet<char>()); right < s.Length; right++)
+        for (var (left, right, set) = (0, 0, new HashSet<char>(s.Length)); right < s.Length; right++)
         {
             if (!set.Add(s[right]))
             {

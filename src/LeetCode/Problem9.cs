@@ -16,7 +16,7 @@ public static class Problem9
     /// <returns>Grouped anagrams.</returns>
     public static IList<IList<string>> GroupAnagrams(string[] strs)
     {
-        var dict = new Dictionary<string, IList<string>>();
+        var dict = new Dictionary<string, IList<string>>(strs.Length);
 
         foreach (var str in strs)
         {

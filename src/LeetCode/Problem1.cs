@@ -17,7 +17,7 @@ public static class Problem1
     /// <returns>Indices of the two numbers that add up to the target.</returns>
     public static int[] TwoSum(int[] nums, int target)
     {
-        var dict = new Dictionary<int, int>();
+        var dict = new Dictionary<int, int>(nums.Length);
 
         for (var i = 0; i < nums.Length; i++)
         {
