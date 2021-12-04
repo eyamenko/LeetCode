@@ -53,7 +53,10 @@ public static class Problem9
 
         for (var i = 0; i < alphabet.Length; i++)
         {
-            sb = sb.Append((char)(i + 'a'), alphabet[i]);
+            if (alphabet[i] > 0)
+            {
+                sb = sb.Append(alphabet[i]).Append((char)(i + 'a'));
+            }
         }
 
         return sb.ToString();

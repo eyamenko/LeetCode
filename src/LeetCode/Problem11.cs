@@ -15,7 +15,7 @@ public static class Problem11
     /// <returns>True, if the last index can be reached.</returns>
     public static bool CanJump(int[] nums)
     {
-        for (var (i, maxIndex) = (0, 0); maxIndex < nums.Length - 1; i++)
+        for (int i = 0, maxIndex = 0, length = nums.Length - 1; maxIndex < length; i++)
         {
             maxIndex = Math.Max(maxIndex, nums[i] + i);
 

@@ -21,7 +21,7 @@ public static class Problem10
 
         var globalSum = nums[0];
 
-        for (var (i, currentSum) = (1, globalSum); i < nums.Length; i++)
+        for (int i = 1, currentSum = globalSum; i < nums.Length; i++)
         {
             if (currentSum < 0)
             {

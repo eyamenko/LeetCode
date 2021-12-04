@@ -18,7 +18,7 @@ public static class Problem3
     {
         var maxArea = 0;
 
-        for (var (left, right) = (0, height.Length - 1); left < right;)
+        for (int left = 0, right = height.Length - 1; left < right;)
         {
             maxArea = Math.Max(maxArea, (right - left) * Math.Min(height[left], height[right]));
 

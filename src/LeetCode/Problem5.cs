@@ -29,17 +29,17 @@ public static class Problem5
 
         var (previous, current) = (default(ListNode), head);
 
-        for (var i = count - n; i > 0 && current.Next != null; i--)
+        for (var i = count - n; i > 0; i--)
         {
-            (previous, current) = (current, current.Next);
+            (previous, current) = (current, current!.Next);
         }
 
         if (previous == null)
         {
-            return current.Next;
+            return current!.Next;
         }
 
-        previous.Next = current.Next;
+        previous.Next = current!.Next;
 
         return head;
     }

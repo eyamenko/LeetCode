@@ -15,8 +15,9 @@ public static class Problem2
     public static int LengthOfLongestSubstring(string s)
     {
         var maxLength = 0;
+        var set = new HashSet<char>(s.Length);
 
-        for (var (left, right, set) = (0, 0, new HashSet<char>(s.Length)); right < s.Length; right++)
+        for (int left = 0, right = 0; right < s.Length; right++)
         {
             if (!set.Add(s[right]))
             {

@@ -18,7 +18,7 @@ public static class Problem4
 
         Array.Sort(nums);
 
-        for (var i = 0; i < nums.Length; i++)
+        for (int i = 0, length = nums.Length - 2; i < length; i++)
         {
             if (i == 0 || nums[i] != nums[i - 1])
             {
@@ -31,7 +31,7 @@ public static class Problem4
 
     private static void TwoSum(int[] nums, int targetSum, int i, IList<IList<int>> result)
     {
-        for (var (left, right) = (i + 1, nums.Length - 1); left < right;)
+        for (int left = i + 1, right = nums.Length - 1; left < right;)
         {
             var sum = nums[left] + nums[right];
 
