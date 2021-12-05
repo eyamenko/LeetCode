@@ -1,7 +1,7 @@
 namespace LeetCode;
 
 /// <summary>
-/// Singly linked list node.
+/// Singly linked list's node.
 /// </summary>
 public class ListNode
 {
@@ -27,7 +27,7 @@ public class ListNode
     /// <summary>
     /// Gets value.
     /// </summary>
-    public int Val { get; private set; }
+    public int Val { get; }
 
     /// <summary>
     /// Gets or sets the next node.
