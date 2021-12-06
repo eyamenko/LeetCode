@@ -7,8 +7,8 @@ public class Problem18Tests
     public static readonly object[][] TestData = new[]
     {
         new object[] { new TreeNode(2, 1, 3), true },
-        new object[] { new TreeNode(5, 1, 4, 0, 0, 3, 6), false },
-        new object[] { new TreeNode(5, 4, 6, 0, 0, 3, 7), false },
+        new object[] { new TreeNode(5, 1, 4, null, null, 3, 6), false },
+        new object[] { new TreeNode(5, 4, 6, null, null, 3, 7), false },
         new object[] { new TreeNode(2147483647), true },
     };
 

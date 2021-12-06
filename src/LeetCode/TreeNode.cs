@@ -9,29 +9,34 @@ public class TreeNode
     /// Initializes a new instance of the <see cref="TreeNode"/> class.
     /// </summary>
     /// <param name="nodes">Node values.</param>
-    public TreeNode(params int[] nodes)
+    public TreeNode(params int?[] nodes)
     : this(nodes, 0)
     {
     }
 
-    private TreeNode(int[] nodes, int i)
+    private TreeNode(int?[] nodes, int i)
     {
         if (nodes.Length == 0)
         {
             throw new ArgumentException("Nodes cannot be empty", nameof(nodes));
         }
 
-        this.Val = nodes[i];
+        if (i >= nodes.Length)
+        {
+            throw new ArgumentException("Index is out of range", nameof(i));
+        }
+
+        this.Val = nodes[i] ?? throw new InvalidOperationException("Node value should be present");
 
         var leftIndex = (i * 2) + 1;
         var rightIndex = (i * 2) + 2;
 
-        if (leftIndex < nodes.Length && nodes[leftIndex] != 0)
+        if (leftIndex < nodes.Length && nodes[leftIndex] != null)
         {
             this.Left = new TreeNode(nodes, leftIndex);
         }
 
-        if (rightIndex < nodes.Length && nodes[rightIndex] != 0)
+        if (rightIndex < nodes.Length && nodes[rightIndex] != null)
         {
             this.Right = new TreeNode(nodes, rightIndex);
         }
