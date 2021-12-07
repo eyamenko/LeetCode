@@ -1,7 +1,7 @@
 namespace LeetCode;
 
 /// <summary>
-/// BST's node.
+/// Binary tree's node.
 /// </summary>
 public class TreeNode
 {
@@ -56,4 +56,43 @@ public class TreeNode
     /// Gets or sets the right node.
     /// </summary>
     public TreeNode? Right { get; set; }
+
+    /// <inheritdoc/>
+    public override bool Equals(object? obj)
+    {
+        if (obj is null)
+        {
+            return false;
+        }
+
+        if (obj is not TreeNode other)
+        {
+            return false;
+        }
+
+        if (this.Val != other.Val)
+        {
+            return false;
+        }
+
+        if (this.Left != null && this.Right != null)
+        {
+            return this.Left.Equals(other.Left) && this.Right.Equals(other.Right);
+        }
+
+        if (this.Left is not null)
+        {
+            return this.Left.Equals(other.Left);
+        }
+
+        if (this.Right is not null)
+        {
+            return this.Right.Equals(other.Right);
+        }
+
+        return other.Left == null && other.Right == null;
+    }
+
+    /// <inheritdoc/>
+    public override int GetHashCode() => (this.Val, this.Left, this.Right).GetHashCode();
 }
