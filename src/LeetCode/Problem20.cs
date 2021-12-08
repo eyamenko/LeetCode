@@ -1,7 +1,7 @@
 namespace LeetCode;
 
 /// <summary>
-/// <see href="https://leetcode.com/problems/same-tree/">Same Tree</see>.
+/// <see href="https://leetcode.com/problems/binary-tree-level-order-traversal/">Binary Tree Level Order Traversal</see>.
 /// </summary>
 public static class Problem20
 {
