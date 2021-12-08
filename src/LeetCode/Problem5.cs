@@ -10,9 +10,9 @@ public static class Problem5
     /// Time complexity: O(n).
     /// Space complexity: O(1).
     /// </summary>
-    /// <param name="head">Linked list's head.</param>
+    /// <param name="head">Linked list head.</param>
     /// <param name="n">Nth node to remove.</param>
-    /// <returns>New linked list's head.</returns>
+    /// <returns>New linked list head.</returns>
     public static ListNode? RemoveNthFromEnd(ListNode head, int n)
     {
         var (count, next) = (1, head.Next);

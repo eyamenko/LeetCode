@@ -10,7 +10,7 @@ public static class Problem21
     /// Time complexity: O(n).
     /// Space complexity: O(n).
     /// </summary>
-    /// <param name="root">Binary tree's root.</param>
+    /// <param name="root">Binary tree root.</param>
     /// <returns>Maximum depth of the binary tree.</returns>
     public static int MaxDepth(TreeNode? root) => Traverse(root, 0);
 

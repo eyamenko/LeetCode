@@ -15,7 +15,7 @@ public static class Problem24
     /// Time complexity: O(n).
     /// Space complexity: O(n).
     /// </summary>
-    /// <param name="root">Binary tree's root.</param>
+    /// <param name="root">Binary tree root.</param>
     /// <returns>Maximum path sum of any non-empty path.</returns>
     public static int MaxPathSum(TreeNode root)
     {

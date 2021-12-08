@@ -10,7 +10,7 @@ public static class Problem20
     /// Time complexity: O(n).
     /// Space complexity: O(n).
     /// </summary>
-    /// <param name="root">Binary tree's root.</param>
+    /// <param name="root">Binary tree root.</param>
     /// <returns>Traversed values.</returns>
     public static IList<IList<int>> LevelOrder(TreeNode? root)
     {

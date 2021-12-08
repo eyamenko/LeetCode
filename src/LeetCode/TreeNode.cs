@@ -1,7 +1,7 @@
 namespace LeetCode;
 
 /// <summary>
-/// Binary tree's node.
+/// Binary tree node.
 /// </summary>
 public class TreeNode
 {
@@ -68,6 +68,11 @@ public class TreeNode
         if (obj is not TreeNode other)
         {
             return false;
+        }
+
+        if (this == other)
+        {
+            return true;
         }
 
         if (this.Val != other.Val)

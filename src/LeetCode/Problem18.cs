@@ -10,7 +10,7 @@ public static class Problem18
     /// Time complexity: O(n).
     /// Space complexity: O(n).
     /// </summary>
-    /// <param name="root">BST's root.</param>
+    /// <param name="root">Binary search tree root.</param>
     /// <returns>True, if the BST is valid.</returns>
     public static bool IsValidBST(TreeNode root)
     => IsValidBST(root, null, null);

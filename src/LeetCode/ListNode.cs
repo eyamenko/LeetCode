@@ -1,7 +1,7 @@
 namespace LeetCode;
 
 /// <summary>
-/// Singly linked list's node.
+/// Singly linked list node.
 /// </summary>
 public class ListNode
 {
@@ -45,6 +45,11 @@ public class ListNode
         if (obj is not ListNode other)
         {
             return false;
+        }
+
+        if (this == other)
+        {
+            return true;
         }
 
         if (this.Val != other.Val)
