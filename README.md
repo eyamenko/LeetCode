@@ -31,3 +31,4 @@
 1. [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) - [Solution](src/LeetCode/Problem29.cs)
 1. [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) - [Solution](src/LeetCode/Problem30.cs)
 1. [House Robber](https://leetcode.com/problems/house-robber/) - [Solution](src/LeetCode/Problem31.cs)
+1. [Number of Islands](https://leetcode.com/problems/number-of-islands/) - [Solution](src/LeetCode/Problem32.cs)
