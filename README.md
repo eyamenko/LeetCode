@@ -26,3 +26,4 @@
 1. [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) - [Solution](src/LeetCode/Problem24.cs)
 1. [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) - [Solution](src/LeetCode/Problem25.cs)
 1. [Clone Graph](https://leetcode.com/problems/clone-graph/) - [Solution](src/LeetCode/Problem26.cs)
+1. [Word Break](https://leetcode.com/problems/word-break/) - [Solution](src/LeetCode/Problem27.cs)
