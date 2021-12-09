@@ -28,3 +28,4 @@
 1. [Clone Graph](https://leetcode.com/problems/clone-graph/) - [Solution](src/LeetCode/Problem26.cs)
 1. [Word Break](https://leetcode.com/problems/word-break/) - [Solution](src/LeetCode/Problem27.cs)
 1. [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) - [Solution](src/LeetCode/Problem28.cs)
+1. [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) - [Solution](src/LeetCode/Problem29.cs)
