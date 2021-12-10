@@ -33,3 +33,4 @@
 1. [House Robber](https://leetcode.com/problems/house-robber/) - [Solution](src/LeetCode/Problem31.cs)
 1. [Number of Islands](https://leetcode.com/problems/number-of-islands/) - [Solution](src/LeetCode/Problem32.cs)
 1. [Course Schedule](https://leetcode.com/problems/course-schedule/) - [Solution](src/LeetCode/Problem33.cs)
+1. [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) - [Solution](src/LeetCode/Problem34.cs)
