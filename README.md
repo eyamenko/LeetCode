@@ -32,3 +32,4 @@
 1. [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) - [Solution](src/LeetCode/Problem30.cs)
 1. [House Robber](https://leetcode.com/problems/house-robber/) - [Solution](src/LeetCode/Problem31.cs)
 1. [Number of Islands](https://leetcode.com/problems/number-of-islands/) - [Solution](src/LeetCode/Problem32.cs)
+1. [Course Schedule](https://leetcode.com/problems/course-schedule/) - [Solution](src/LeetCode/Problem33.cs)
