@@ -35,3 +35,4 @@
 1. [Course Schedule](https://leetcode.com/problems/course-schedule/) - [Solution](src/LeetCode/Problem33.cs)
 1. [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) - [Solution](src/LeetCode/Problem34.cs)
 1. [Word Search II](https://leetcode.com/problems/word-search-ii/) - [Solution](src/LeetCode/Problem35.cs)
+1. [House Robber II](https://leetcode.com/problems/house-robber-ii/) - [Solution](src/LeetCode/Problem36.cs)
