@@ -38,3 +38,4 @@
 1. [House Robber II](https://leetcode.com/problems/house-robber-ii/) - [Solution](src/LeetCode/Problem36.cs)
 1. [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) - [Solution](src/LeetCode/Problem37.cs)
 1. [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) - [Solution](src/LeetCode/Problem38.cs)
+1. [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) - [Solution](src/LeetCode/Problem39.cs)
