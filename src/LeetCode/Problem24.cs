@@ -21,7 +21,9 @@ public static class Problem24
     {
         globalSum = root.Val;
 
+#pragma warning disable IDE0058
         Traverse(root);
+#pragma warning restore IDE0058
 
         return globalSum;
     }

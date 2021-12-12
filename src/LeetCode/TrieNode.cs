@@ -57,7 +57,9 @@ public class TrieNode
     public void Remove(string word)
     {
 #pragma warning disable IDE0022
+#pragma warning disable IDE0058
         this.Remove(word, 0);
+#pragma warning restore IDE0058
 #pragma warning restore IDE0022
     }
 

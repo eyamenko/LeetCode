@@ -19,7 +19,9 @@ public static class Problem25
 
         for (var i = 0; i < nums.Length; i++)
         {
+#pragma warning disable IDE0058
             set.Add(nums[i]);
+#pragma warning restore IDE0058
         }
 
         var maxLength = 0;

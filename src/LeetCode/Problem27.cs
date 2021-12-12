@@ -20,7 +20,9 @@ public static class Problem27
 
         for (var i = 0; i < wordDict.Count; i++)
         {
+#pragma warning disable IDE0058
             wordDictSet.Add(wordDict[i]);
+#pragma warning restore IDE0058
         }
 
         return Traverse(s, 0, new bool[s.Length], wordDictSet);
