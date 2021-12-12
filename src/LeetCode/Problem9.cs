@@ -37,23 +37,18 @@ public static class Problem9
 
     private static string GenerateKey(string str)
     {
-        if (string.IsNullOrEmpty(str))
-        {
-            return string.Empty;
-        }
-
         var alphabet = new int[26];
 
-        foreach (var ch in str)
+        foreach (var character in str)
         {
-            alphabet[ch - 'a']++;
+            alphabet[character - 'a']++;
         }
 
         var sb = new StringBuilder();
 
         for (var i = 0; i < alphabet.Length; i++)
         {
-            if (alphabet[i] > 0)
+            if (alphabet[i] != 0)
             {
                 sb = sb.Append(alphabet[i]).Append((char)(i + 'a'));
             }
