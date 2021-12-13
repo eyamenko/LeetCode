@@ -42,3 +42,4 @@
 1. [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) - [Solution](src/LeetCode/Problem40.cs)
 1. [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) - [Solution](src/LeetCode/Problem41.cs)
 1. [Valid Anagram](https://leetcode.com/problems/valid-anagram/) - [Solution](src/LeetCode/Problem42.cs)
+1. [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) - [Solution](src/LeetCode/Problem43.cs)
