@@ -31,7 +31,8 @@ public static class Problem8
                 return mid;
             }
 
-            if ((low != mid && nums[low] <= nums[mid - 1] && target >= nums[low] && target <= nums[mid - 1]) || (high != mid && nums[mid + 1] <= nums[high] && (target < nums[mid + 1] || target > nums[high])))
+            if ((low != mid && nums[low] <= nums[mid - 1] && target >= nums[low] && target <= nums[mid - 1])
+            || (high != mid && nums[mid + 1] <= nums[high] && (target < nums[mid + 1] || target > nums[high])))
             {
                 high = mid - 1;
             }

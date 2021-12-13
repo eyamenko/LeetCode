@@ -23,15 +23,15 @@ public static class Problem6
     {
         var stack = new Stack<char>(s.Length);
 
-        foreach (var ch in s)
+        foreach (var character in s)
         {
-            if (Map.ContainsKey(ch))
+            if (Map.ContainsKey(character))
             {
-                stack.Push(ch);
+                stack.Push(character);
             }
             else
             {
-                if (stack.Count == 0 || Map[stack.Pop()] != ch)
+                if (stack.Count == 0 || Map[stack.Pop()] != character)
                 {
                     return false;
                 }

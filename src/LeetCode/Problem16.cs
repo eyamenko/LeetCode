@@ -23,15 +23,15 @@ public static class Problem16
 
         var (minWindowSubstring, sDict, tDict) = (string.Empty, new Dictionary<char, int>(t.Length), new Dictionary<char, int>(t.Length));
 
-        foreach (var ch in t)
+        foreach (var character in t)
         {
-            if (tDict.ContainsKey(ch))
+            if (tDict.ContainsKey(character))
             {
-                tDict[ch]++;
+                tDict[character]++;
             }
             else
             {
-                tDict.Add(ch, 1);
+                tDict.Add(character, 1);
             }
         }
 
