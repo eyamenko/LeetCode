@@ -45,3 +45,4 @@
 1. [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) - [Solution](src/LeetCode/Problem43.cs)
 1. [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) - [Solution](src/LeetCode/Problem44.cs)
 1. [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) - [Solution](src/LeetCode/Problem45.cs)
+1. [Coin Change](https://leetcode.com/problems/coin-change/) - [Solution](src/LeetCode/Problem46.cs)
