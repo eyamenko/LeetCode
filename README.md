@@ -43,3 +43,4 @@
 1. [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) - [Solution](src/LeetCode/Problem41.cs)
 1. [Valid Anagram](https://leetcode.com/problems/valid-anagram/) - [Solution](src/LeetCode/Problem42.cs)
 1. [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) - [Solution](src/LeetCode/Problem43.cs)
+1. [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) - [Solution](src/LeetCode/Problem44.cs)
