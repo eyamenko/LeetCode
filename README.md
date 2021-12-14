@@ -46,3 +46,4 @@
 1. [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) - [Solution](src/LeetCode/Problem44.cs)
 1. [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) - [Solution](src/LeetCode/Problem45.cs)
 1. [Coin Change](https://leetcode.com/problems/coin-change/) - [Solution](src/LeetCode/Problem46.cs)
+1. [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) - [Solution](src/LeetCode/Problem47.cs)
