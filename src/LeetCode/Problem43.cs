@@ -5,16 +5,16 @@ namespace LeetCode;
 /// </summary>
 public class Problem43
 {
-    private readonly PriorityQueue<int, int> minHeap;
-    private readonly PriorityQueue<int, int> maxHeap;
+    private readonly BinaryHeap<int> minHeap;
+    private readonly BinaryHeap<int> maxHeap;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="Problem43"/> class.
     /// </summary>
     public Problem43()
     {
-        this.minHeap = new PriorityQueue<int, int>(25000, new MinHeapComparer());
-        this.maxHeap = new PriorityQueue<int, int>(25000, new MaxHeapComparer());
+        this.minHeap = new BinaryHeap<int>(Comparer<int>.Create((a, b) => b.CompareTo(a)));
+        this.maxHeap = new BinaryHeap<int>(Comparer<int>.Create((a, b) => a.CompareTo(b)));
     }
 
     /// <summary>
@@ -31,26 +31,24 @@ public class Problem43
         {
             if (this.minHeap.Count > this.maxHeap.Count)
             {
-                var maxHeapNum = this.minHeap.EnqueueDequeue(num, num);
-
-                this.maxHeap.Enqueue(maxHeapNum, maxHeapNum);
+                this.minHeap.Enqueue(num);
+                this.maxHeap.Enqueue(this.minHeap.Dequeue());
             }
             else
             {
-                this.minHeap.Enqueue(num, num);
+                this.minHeap.Enqueue(num);
             }
         }
         else
         {
             if (this.maxHeap.Count > this.minHeap.Count)
             {
-                var minHeapNum = this.maxHeap.EnqueueDequeue(num, num);
-
-                this.minHeap.Enqueue(minHeapNum, minHeapNum);
+                this.maxHeap.Enqueue(num);
+                this.minHeap.Enqueue(this.maxHeap.Dequeue());
             }
             else
             {
-                this.maxHeap.Enqueue(num, num);
+                this.maxHeap.Enqueue(num);
             }
         }
     }
@@ -75,15 +73,5 @@ public class Problem43
         {
             return (this.minHeap.Peek() + this.maxHeap.Peek()) / 2.0;
         }
-    }
-
-    private class MinHeapComparer : IComparer<int>
-    {
-        public int Compare(int x, int y) => x.CompareTo(y);
-    }
-
-    private class MaxHeapComparer : IComparer<int>
-    {
-        public int Compare(int x, int y) => y.CompareTo(x);
     }
 }
