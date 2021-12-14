@@ -47,3 +47,4 @@
 1. [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) - [Solution](src/LeetCode/Problem45.cs)
 1. [Coin Change](https://leetcode.com/problems/coin-change/) - [Solution](src/LeetCode/Problem46.cs)
 1. [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) - [Solution](src/LeetCode/Problem47.cs)
+1. [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/) - [Solution](src/LeetCode/Problem48.cs)
