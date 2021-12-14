@@ -47,6 +47,11 @@ public static class Problem46
                 if (subResult >= 0)
                 {
                     minCoins = Math.Min(minCoins, subResult + 1);
+
+                    if (minCoins == 1)
+                    {
+                        break;
+                    }
                 }
             }
         }
