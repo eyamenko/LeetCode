@@ -1,5 +1,7 @@
 namespace LeetCode;
 
+using System.Linq;
+
 /// <summary>
 /// <see href="https://leetcode.com/problems/house-robber/">House Robber</see>.
 /// </summary>
@@ -23,16 +25,11 @@ public static class Problem31
             return 0;
         }
 
-        if (nums.Length == 1)
+        for (var i = 1; i < nums.Length; i++)
         {
-            return nums[0];
+            nums[i] = Math.Max(nums[i - 1], nums[i] + nums.ElementAtOrDefault(i - 2));
         }
 
-        for (var i = nums.Length - 3; i >= 0; i--)
-        {
-            nums[i] += Math.Max(nums[i + 2], nums[Math.Min(i + 3, nums.Length - 1)]);
-        }
-
-        return Math.Max(nums[0], nums[1]);
+        return nums[^1];
     }
 }

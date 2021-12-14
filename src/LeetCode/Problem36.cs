@@ -26,28 +26,16 @@ public static class Problem36
             return nums[0];
         }
 
-        var left = new int[nums.Length];
-        var right = new int[nums.Length];
+        return Math.Max(RobV1(nums[..^1]), RobV1(nums[1..]));
+    }
 
-        for (int i = 0, j = nums.Length - 1; i < nums.Length && j >= 0; i++, j--)
+    private static int RobV1(int[] nums)
+    {
+        for (var i = 1; i < nums.Length; i++)
         {
-            if (i < 2)
-            {
-                left[i] = nums[i];
-                right[j] = nums[j];
-            }
-            else if (i == 2)
-            {
-                left[i] = nums[i] + nums[0];
-                right[j] = nums[j] + nums[^1];
-            }
-            else
-            {
-                left[i] = nums[i] + Math.Max(left[i - 2], left[i - 3]);
-                right[j] = nums[j] + Math.Max(right[j + 2], right[j + 3]);
-            }
+            nums[i] = Math.Max(nums[i - 1], nums[i] + nums.ElementAtOrDefault(i - 2));
         }
 
-        return Math.Max(Math.Max(Math.Max(left[^1] - nums[0], right[0] - nums[^1]), Math.Max(left[^2], right[1])), Math.Max(nums[0], nums[^1]));
+        return nums[^1];
     }
 }
