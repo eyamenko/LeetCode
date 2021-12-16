@@ -49,3 +49,4 @@
 1. [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) - [Solution](src/LeetCode/Problem47.cs)
 1. [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/) - [Solution](src/LeetCode/Problem48.cs)
 1. [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) - [Solution](src/LeetCode/Problem49.cs)
+1. [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) - [Solution](src/LeetCode/Problem50.cs)
