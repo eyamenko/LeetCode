@@ -8,8 +8,8 @@ public static class Problem16
     /// <summary>
     /// Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window.
     /// If there is no such substring, return the empty string "".
-    /// Time complexity: O(m).
-    /// Space complexity: O(n).
+    /// Time complexity: O(m + n).
+    /// Space complexity: O(1).
     /// </summary>
     /// <param name="s">String 1.</param>
     /// <param name="t">String 2.</param>
@@ -21,7 +21,7 @@ public static class Problem16
             return string.Empty;
         }
 
-        var (minWindowSubstring, sDict, tDict) = (string.Empty, new Dictionary<char, int>(t.Length), new Dictionary<char, int>(t.Length));
+        var (minWindowSubstring, sDict, tDict) = (string.Empty, new Dictionary<char, int>(26), new Dictionary<char, int>(26));
 
         foreach (var character in t)
         {
