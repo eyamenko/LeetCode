@@ -50,3 +50,4 @@
 1. [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/) - [Solution](src/LeetCode/Problem48.cs)
 1. [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) - [Solution](src/LeetCode/Problem49.cs)
 1. [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) - [Solution](src/LeetCode/Problem50.cs)
+1. [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) - [Solution](src/LeetCode/Problem51.cs)
