@@ -14,7 +14,7 @@ public static class Problem4
     /// <returns>Triplets that add up to 0.</returns>
     public static IList<IList<int>> ThreeSum(int[] nums)
     {
-        var result = new List<IList<int>>(nums.Length);
+        var result = new List<IList<int>>();
 
         Array.Sort(nums);
 
@@ -22,16 +22,16 @@ public static class Problem4
         {
             if (i == 0 || nums[i] != nums[i - 1])
             {
-                TwoSum(nums, -nums[i], i, result);
+                TwoSum(nums, -nums[i], i + 1, nums.Length - 1, result);
             }
         }
 
         return result;
     }
 
-    private static void TwoSum(int[] nums, int targetSum, int i, IList<IList<int>> result)
+    private static void TwoSum(int[] nums, int targetSum, int leftStart, int rightStart, IList<IList<int>> result)
     {
-        for (int left = i + 1, right = nums.Length - 1; left < right;)
+        for (int left = leftStart, right = rightStart; left < right;)
         {
             var sum = nums[left] + nums[right];
 
@@ -45,9 +45,9 @@ public static class Problem4
             }
             else
             {
-                if (left == i + 1 || right == nums.Length - 1 || nums[left] != nums[left - 1] || nums[right] != nums[right + 1])
+                if (left == leftStart || right == rightStart || nums[left] != nums[left - 1] || nums[right] != nums[right + 1])
                 {
-                    result.Add(new List<int> { nums[i], nums[left], nums[right] });
+                    result.Add(new List<int> { -targetSum, nums[left], nums[right] });
                 }
 
                 left++;

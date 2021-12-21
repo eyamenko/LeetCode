@@ -20,9 +20,7 @@ public static class Problem8
     /// <returns>Index of target.</returns>
     public static int Search(int[] nums, int target)
     {
-        var (low, high) = (0, nums.Length - 1);
-
-        while (low <= high)
+        for (int low = 0, high = nums.Length - 1; low <= high;)
         {
             var mid = (low + high) / 2;
 
