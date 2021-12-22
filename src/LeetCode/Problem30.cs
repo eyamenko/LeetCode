@@ -15,10 +15,7 @@ public static class Problem30
     /// <returns>Minimum element.</returns>
     public static int FindMin(int[] nums)
     {
-        var low = 0;
-        var high = nums.Length - 1;
-
-        while (low <= high)
+        for (int low = 0, high = nums.Length - 1; low <= high;)
         {
             var mid = (low + high) / 2;
             var leftMin = Math.Min(nums[low], nums[Math.Max(low, mid - 1)]);
