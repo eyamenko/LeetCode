@@ -31,11 +31,11 @@ public static class Problem53
 
     private static int Traverse(string s, int left, int right)
     {
-        if (left < 0 || right >= s.Length || s[left] != s[right])
+        if (left >= 0 && right < s.Length && s[left] == s[right])
         {
-            return 0;
+            return 1 + Traverse(s, left - 1, right + 1);
         }
 
-        return 1 + Traverse(s, left - 1, right + 1);
+        return 0;
     }
 }
