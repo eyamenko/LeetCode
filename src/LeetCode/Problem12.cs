@@ -15,50 +15,26 @@ public static class Problem12
     /// <returns>Array of the non-overlapping intervals that cover all the intervals in the input.</returns>
     public static int[][] Merge(int[][] intervals)
     {
-        if (intervals.Length < 2)
+        Array.Sort(intervals, Comparer<int[]>.Create((a, b) => a[0].CompareTo(b[0])));
+
+        var result = new List<int[]>(intervals.Length);
+
+        for (var i = 1; i < intervals.Length; i++)
         {
-            return intervals;
-        }
+            var (current, previous) = (intervals[i], intervals[i - 1]);
 
-        var mid = intervals.Length / 2;
-        var left = intervals[..mid];
-        var right = intervals[mid..];
-
-        return Merge(Merge(left), Merge(right));
-    }
-
-    private static int[][] Merge(int[][] left, int[][] right)
-    {
-        var result = new List<int[]>(left.Length + right.Length);
-
-        for (var (leftIdx, rightIdx) = (0, 0); leftIdx < left.Length || rightIdx < right.Length;)
-        {
-            if (rightIdx >= right.Length || (leftIdx < left.Length && left[leftIdx][1] < right[rightIdx][0]))
+            if (current[0] <= previous[1])
             {
-                result.Add(left[leftIdx]);
-                leftIdx++;
-            }
-            else if (leftIdx >= left.Length || (rightIdx < right.Length && right[rightIdx][1] < left[leftIdx][0]))
-            {
-                result.Add(right[rightIdx]);
-                rightIdx++;
+                current[0] = Math.Min(current[0], previous[0]);
+                current[1] = Math.Max(current[1], previous[1]);
             }
             else
             {
-                var interval = (Math.Min(left[leftIdx][0], right[rightIdx][0]), Math.Max(left[leftIdx][1], right[rightIdx][1]));
-
-                if (left[leftIdx][1] > right[rightIdx][1])
-                {
-                    (left[leftIdx][0], left[leftIdx][1]) = interval;
-                    rightIdx++;
-                }
-                else
-                {
-                    (right[rightIdx][0], right[rightIdx][1]) = interval;
-                    leftIdx++;
-                }
+                result.Add(previous);
             }
         }
+
+        result.Add(intervals[^1]);
 
         return result.ToArray();
     }
