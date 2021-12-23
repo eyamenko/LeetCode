@@ -55,3 +55,4 @@
 1. [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) - [Solution](src/LeetCode/Problem53.cs)
 1. [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) - [Solution](src/LeetCode/Problem54.cs)
 1. [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) - [Solution](src/LeetCode/Problem55.cs)
+1. [Reverse Integer](https://leetcode.com/problems/reverse-integer/) - [Solution](src/LeetCode/Problem56.cs)
