@@ -56,3 +56,4 @@
 1. [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) - [Solution](src/LeetCode/Problem54.cs)
 1. [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) - [Solution](src/LeetCode/Problem55.cs)
 1. [Reverse Integer](https://leetcode.com/problems/reverse-integer/) - [Solution](src/LeetCode/Problem56.cs)
+1. [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) - [Solution](src/LeetCode/Problem57.cs)
