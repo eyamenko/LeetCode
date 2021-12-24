@@ -16,11 +16,6 @@ public class Problem35Tests
     {
         var actual = Problem35.FindWords(board, words);
 
-        Assert.Equal(expected.Length, actual.Count);
-
-        for (var i = 0; i < expected.Length; i++)
-        {
-            Assert.Equal(expected[i], actual[i]);
-        }
+        Assert.Equal(expected, actual);
     }
 }
