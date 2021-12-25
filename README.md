@@ -58,3 +58,4 @@
 1. [Reverse Integer](https://leetcode.com/problems/reverse-integer/) - [Solution](src/LeetCode/Problem56.cs)
 1. [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) - [Solution](src/LeetCode/Problem57.cs)
 1. [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) - [Solution](src/LeetCode/Problem58.cs)
+1. [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) - [Solution](src/LeetCode/Problem59.cs)
