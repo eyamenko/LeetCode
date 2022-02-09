@@ -7,8 +7,8 @@ public static class Problem7
 {
     /// <summary>
     /// You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
-    /// Time complexity: O(n log k).
-    /// Space complexity: O(k).
+    /// Time complexity: O(n k log k).
+    /// Space complexity: O(n k).
     /// </summary>
     /// <param name="lists">Array to traverse.</param>
     /// <returns>Merged linked list.</returns>
@@ -33,39 +33,22 @@ public static class Problem7
 
     private static ListNode? Merge(ListNode? left, ListNode? right)
     {
-        if (right == null || left == null)
+        if (left == null || right == null)
         {
-            return right ?? left;
+            return left ?? right;
         }
 
-        ListNode head, current;
-
-        if (left.Val < right.Val)
+        if (left.Val <= right.Val)
         {
-            (head, current, left) = (left, left, left.Next);
+            left.Next = Merge(left.Next, right);
+
+            return left;
         }
         else
         {
-            (head, current, right) = (right, right, right.Next);
-        }
+            right.Next = Merge(left, right.Next);
 
-        while (left != null || right != null)
-        {
-            if (left == null || right == null)
-            {
-                current.Next = left ?? right;
-                break;
-            }
-            else if (left.Val < right.Val)
-            {
-                (current, current.Next, left) = (left, left, left.Next);
-            }
-            else
-            {
-                (current, current.Next, right) = (right, right, right.Next);
-            }
+            return right;
         }
-
-        return head;
     }
 }
