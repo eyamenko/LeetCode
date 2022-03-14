@@ -5,7 +5,7 @@ using System.Globalization;
 /// <summary>
 /// <see href="https://leetcode.com/problems/serialize-and-deserialize-binary-tree/">Serialize and Deserialize Binary Tree</see>.
 /// </summary>
-public class Problem44
+public static class Problem44
 {
     /// <summary>
     /// Encodes a tree to a single string.
@@ -14,14 +14,14 @@ public class Problem44
     /// </summary>
     /// <param name="root">Binary tree to serialize.</param>
     /// <returns>Serialized binary tree.</returns>
-    public string Serialize(TreeNode? root)
+    public static string Serialize(TreeNode? root)
     {
         if (root == null)
         {
             return string.Empty;
         }
 
-        return $"{root.Val},{this.Serialize(root.Left)},{this.Serialize(root.Right)}";
+        return $"{root.Val},{Serialize(root.Left)},{Serialize(root.Right)}";
     }
 
     /// <summary>
@@ -31,7 +31,7 @@ public class Problem44
     /// </summary>
     /// <param name="data">Serialized binary tree.</param>
     /// <returns>Deserialized binary tree.</returns>
-    public TreeNode? Deserialize(string data)
+    public static TreeNode? Deserialize(string data)
     {
         if (string.IsNullOrEmpty(data))
         {

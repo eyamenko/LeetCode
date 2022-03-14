@@ -15,9 +15,7 @@ public class Problem44Tests
     [MemberData(nameof(TestData))]
     public void Serialize_and_Deserialize_should_serialize_and_deserialize_binary_tree(TreeNode root, TreeNode expected)
     {
-        var codec = new Problem44();
-
-        var actual = codec.Deserialize(codec.Serialize(root));
+        var actual = Problem44.Deserialize(Problem44.Serialize(root));
 
         Assert.Equal(expected, actual);
     }
